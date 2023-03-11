@@ -1,19 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url("./refs/fonts/Inter/Inter-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Roboto";
+  src: url("../refs/fonts/Roboto/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-  @font-face {
-    font-family: "Inter Bold";
-    src: url("./refs/fonts/Inter/Inter-Bold.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../refs/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title {
+  font-family: "Roboto Bold";
+  font-size: 4rem;
 }
