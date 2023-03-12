@@ -152,10 +152,21 @@ label:hover p.meme_name {
 }
 
 .input:checked + label > .meme > .meme_name > .cross {
-  cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
   background-size: 1.5rem 1.5rem;
   transition: all 0.4s ease-in-out;
   transform: rotate(45deg);
+}
+
+.meme:active {
+    cursor: grab;
+}
+
+.meme:active > .meme_name {
+    color: rgb(126, 26, 219);
+}
+
+.meme:active > .meme_name > .cross {
+    background-image: url('../refs/favicons/cross-mark.svg');
 }
