@@ -136,10 +136,10 @@ input[type="radio"] {
 }
 
 .meme:hover > .meme_name {
-  color: #960533;
+  color: #9f0536;
 }
 
-#block:checked + .meme_pic {
+.input:checked + label > .meme > .meme_pic {
   cursor: pointer;
   width: 16rem;
   height: 16rem;
