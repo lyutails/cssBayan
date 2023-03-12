@@ -18,9 +18,9 @@
   font-style: normal;
 }
 
-/* input[type="radio"] {
+input[type="radio"] {
   visibility: hidden;
-} */
+}
 
 .body {
   width: 100%;
@@ -73,24 +73,26 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .cross {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 0rem;
+  height: 0rem;
   background-image: url("../refs/favicons/cross.svg");
   background-repeat: no-repeat;
-  background-size: 1.5rem 1.5rem;
+  background-size: 0rem 0rem;
   display: inline-block;
 }
 
 .meme_pic {
-  width: 16rem;
-  height: 16rem;
+  width: 0rem;
+  height: 0rem;
   background-repeat: no-repeat;
-  background-size: 16rem 16rem;
+  background-size: 0rem 0rem;
   border-radius: 0.5rem;
   align-self: center;
+  margin-top: 0.4rem;
 }
 
 .meme_pic.first {
@@ -117,20 +119,30 @@
   cursor: pointer;
 }
 
-.meme:hover ~ .meme_pic {
+.meme:hover > .meme_pic {
   cursor: pointer;
-  width: 0rem;
-  height: 0rem;
-  background-size: 0rem 0rem;
+  width: 16rem;
+  height: 16rem;
+  background-size: 16rem 16rem;
   transition: all 0.4s ease-in-out;
 }
 
-#block_first:checked ~ .accordion_icon {
-  width: 3rem;
-  height: 3rem;
-  background-image: url("../refs/favicons/accordion_play.svg");
-  background-repeat: no-repeat;
-  background-size: 3rem 3rem;
-  display: inline-block;
-  margin-left: 1rem;
+.meme:hover > .meme_name > .cross {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.5rem 1.5rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.meme:hover > .meme_name {
+  color: #960533;
+}
+
+#block:checked + .meme_pic {
+  cursor: pointer;
+  width: 16rem;
+  height: 16rem;
+  background-size: 16rem 16rem;
+  transition: all 0.4s ease-in-out;
 }
