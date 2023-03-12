@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Bayan</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="../refs/favicons/cherry-svgrepo-com.svg">
-</head>
-<body>
-    <h1 class="title">CSS Bayan</h1>
-    <span class="line"></span>
-    <div class="meme_first">
-        <p class="meme_first name"></p>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="../refs/favicons/cherry.svg" />
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <h1 class="title">CSS Bayan<span class="accordion_icon"></span></h1>
+      <div class="line"></div>
+      <input type="radio" id="block_first" name="accordion_radio" />
+      <label for="block_first">
+        <div class="meme first">
+          <p class="meme_name">
+            You can't just copy and paste CSS<span class="cross"></span>
+          </p>
+          <div class="meme_pic first"></div>
+        </div>
+      </label>
+      <div class="line"></div>
+      <input type="radio" id="block_second" name="accordion_radio" />
+      <label for="block_second">
+        <div class="meme second">
+          <p class="meme_name">
+            Keep calm and carry on<span class="cross"></span>
+          </p>
+          <div class="meme_pic second"></div>
+        </div>
+      </label>
+      <div class="line"></div>
+      <input type="radio" id="block_third" name="accordion_radio" />
+      <label for="block_third">
+        <div class="meme third">
+          <p class="meme_name">Work-life balance<span class="cross"></span></p>
+          <div class="meme_pic third"></div>
+        </div>
+      </label>
+      <div class="line"></div>
+      <input type="radio" id="block_four" name="accordion_radio" checked />
+      <label for="block_four">
+        <div class="meme fourth">
+          <p class="meme_name">Dude, where is JS<span class="cross"></span></p>
+          <div class="meme_pic fourth"></div>
+        </div>
+      </label>
+      <div class="line"></div>
+      <input type="radio" id="block_five" name="accordion_radio" />
+      <label for="block_five">
+        <div class="meme fifth">
+          <p class="meme_name">
+            Relax and take it easy<span class="cross"></span>
+          </p>
+          <div class="meme_pic fifth"></div>
+        </div>
+      </label>
     </div>
-    <span class="line"></span>
-    <div class="meme_second">
-        <p class="meme_second name"></p>
-    </div>
-    <span class="line"></span>
-    <div class="meme_third">
-        <p class="meme_third name"></p>
-    </div>
-    <span class="line"></span>
-    <div class="meme_fourth">
-        <p class="meme_fourth name"></p>
-    </div>
-    <span class="line"></span>
-    <div class="meme_fifth">
-        <p class="meme_fifth name"></p>
-    </div>
-</body>
+  </body>
 </html>
