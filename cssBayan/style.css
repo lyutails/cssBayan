@@ -18,6 +18,10 @@
   font-style: normal;
 }
 
+html {
+  font-size: 1rem;
+}
+
 input[type="radio"] {
   visibility: hidden;
 }
@@ -127,18 +131,6 @@ input[type="radio"] {
   transition: all 0.4s ease-in-out;
 }
 
-.meme:hover > .meme_name > .cross {
-  cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-size: 1.5rem 1.5rem;
-  transition: all 0.4s ease-in-out;
-}
-
-label:hover p.meme_name {
-  color: #9f0536;
-}
-
 .input:checked + label > .meme > .meme_pic {
   cursor: pointer;
   width: 16rem;
@@ -160,13 +152,50 @@ label:hover p.meme_name {
 }
 
 .meme:active {
-    cursor: grab;
+  cursor: grab;
 }
 
 .meme:active > .meme_name {
-    color: rgb(126, 26, 219);
+  color: rgb(126, 26, 219);
 }
 
 .meme:active > .meme_name > .cross {
-    background-image: url('../refs/favicons/cross-mark.svg');
+  background-image: url("../refs/favicons/cross-mark.svg");
+}
+
+.meme:active > .meme_pic {
+  opacity: 0.8;
+}
+
+@media (any-hover: hover) {
+  .meme:hover > .meme_name > .cross {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 1.5rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  label:hover p.meme_name {
+    color: #9f0536;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 819.99px) {
+  html {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1919.99px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 1.2rem;
+  }
 }
