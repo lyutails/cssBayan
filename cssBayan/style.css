@@ -190,12 +190,12 @@ input[type="radio"] {
 
 @media screen and (min-width: 820px) and (max-width: 1919.99px) {
   html {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (min-width: 1920px) {
   html {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
