@@ -87,6 +87,7 @@ input[type="radio"] {
   background-repeat: no-repeat;
   background-size: 0rem 0rem;
   display: inline-block;
+  transform: rotate(45deg);
 }
 
 .meme_pic {
@@ -97,6 +98,7 @@ input[type="radio"] {
   border-radius: 0.5rem;
   align-self: center;
   margin-top: 0.4rem;
+  transition: 0.4 ease-in-out;
 }
 
 .meme_pic.first {
@@ -148,7 +150,7 @@ input[type="radio"] {
   height: 1.5rem;
   background-size: 1.5rem 1.5rem;
   transition: all 0.4s ease-in-out;
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 
 .meme:active {
@@ -165,6 +167,26 @@ input[type="radio"] {
 
 .meme:active > .meme_pic {
   opacity: 0.8;
+}
+
+.title:active ~ .accordion_icon {
+  animation-name: accordion_anim;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+@keyframes accordion_anim {
+    0% {
+        background-image: url('../refs/favicons/accordion.svg');
+    }
+    50% {
+        background-image: url('../refs/favicons/accordion_play.svg');
+    }
+    100% {
+        background-image: url('../refs/favicons/accordion.svg');
+    }
 }
 
 @media (any-hover: hover) {
