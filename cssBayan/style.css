@@ -38,6 +38,10 @@ input[type="radio"] {
   margin: 0 auto;
 }
 
+div {
+  transition: all 0.4s ease-in-out;
+}
+
 .title {
   font-family: "Roboto Bold";
   font-size: 3rem;
@@ -169,24 +173,26 @@ input[type="radio"] {
   opacity: 0.8;
 }
 
-.title:active ~ .accordion_icon {
+label:active .title > .accordion_icon {
   animation-name: accordion_anim;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: linear;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-play-state: running;
+  animation-fill-mode: forwards;
+  cursor: pointer;
 }
 
 @keyframes accordion_anim {
-    0% {
-        background-image: url('../refs/favicons/accordion.svg');
-    }
-    50% {
-        background-image: url('../refs/favicons/accordion_play.svg');
-    }
-    100% {
-        background-image: url('../refs/favicons/accordion.svg');
-    }
+  0% {
+    background-image: url("../refs/favicons/accordion.svg");
+  }
+  50% {
+    background-image: url("../refs/favicons/accordion_play.svg");
+  }
+  100% {
+    background-image: url("../refs/favicons/accordion.svg");
+  }
 }
 
 @media (any-hover: hover) {
