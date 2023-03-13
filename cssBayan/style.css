@@ -125,18 +125,6 @@ div {
   background-image: url("../refs/pics/sloth_meme_5.png");
 }
 
-.meme:hover {
-  cursor: pointer;
-}
-
-.meme:hover > .meme_pic {
-  cursor: pointer;
-  width: 16rem;
-  height: 16rem;
-  background-size: 16rem 16rem;
-  transition: all 0.4s ease-in-out;
-}
-
 .input:checked + label > .meme > .meme_pic {
   cursor: pointer;
   width: 16rem;
@@ -207,6 +195,18 @@ label:active .title > .accordion_icon {
   label:hover p.meme_name {
     color: #9f0536;
     transition: all 0.2s ease-in-out;
+  }
+
+  .meme:hover {
+    cursor: pointer;
+  }
+
+  .meme:hover > .meme_pic {
+    cursor: pointer;
+    width: 16rem;
+    height: 16rem;
+    background-size: 16rem 16rem;
+    transition: all 0.4s ease-in-out;
   }
 }
 
