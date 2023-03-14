@@ -166,7 +166,7 @@ div {
 
 label:active ~ .title > .accordion_icon {
   animation-name: accordion_anim;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-play-state: running;
