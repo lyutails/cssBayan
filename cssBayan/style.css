@@ -36,6 +36,8 @@ input[type="radio"] {
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 div {
@@ -51,6 +53,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  order: -1;
 }
 
 .accordion_icon {
@@ -161,7 +164,7 @@ div {
   opacity: 0.8;
 }
 
-label:active .title > .accordion_icon {
+label:active ~ .title > .accordion_icon {
   animation-name: accordion_anim;
   animation-duration: 0.5s;
   animation-timing-function: linear;
