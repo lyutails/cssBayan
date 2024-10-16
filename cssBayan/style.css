@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../refs/fonts/Roboto/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../refs/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 1rem;
+}
+
+input[type="radio"] {
+  visibility: hidden;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5eb;
+  font-family: "Roboto";
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  transition: all 0.4s ease-in-out;
+}
+
+.title {
+  font-family: "Roboto Bold";
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+}
+
+.accordion_icon {
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../refs/favicons/accordion.svg");
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.meme_name {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meme {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cross {
+  width: 0rem;
+  height: 0rem;
+  background-image: url("../refs/favicons/cross.svg");
+  background-repeat: no-repeat;
+  background-size: 0rem 0rem;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.meme_pic {
+  width: 0rem;
+  height: 0rem;
+  background-repeat: no-repeat;
+  background-size: 0rem 0rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  margin-top: 0.4rem;
+  transition: 0.4 ease-in-out;
+}
+
+.meme_pic.first {
+  background-image: url("../refs/pics/sloth_meme_1.png");
+}
+
+.meme_pic.second {
+  background-image: url("../refs/pics/sloth_meme_2.png");
+}
+
+.meme_pic.third {
+  background-image: url("../refs/pics/sloth_meme_3.png");
+}
+
+.meme_pic.fourth {
+  background-image: url("../refs/pics/sloth_meme_4.png");
+}
+
+.meme_pic.fifth {
+  background-image: url("../refs/pics/sloth_meme_5.png");
+}
+
+.input:checked + label > .meme > .meme_pic {
+  cursor: pointer;
+  width: 16rem;
+  height: 16rem;
+  background-size: 16rem 16rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.input:checked + label > .meme > .meme_name {
+  color: #9f0536;
+}
+
+.input:checked + label > .meme > .meme_name > .cross {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.5rem 1.5rem;
+  transition: all 0.4s ease-in-out;
+  transform: rotate(90deg);
+}
+
+.meme:active {
+  cursor: grab;
+}
+
+.meme:active > .meme_name {
+  color: rgb(126, 26, 219);
+}
+
+.meme:active > .meme_name > .cross {
+  background-image: url("../refs/favicons/cross-mark.svg");
+}
+
+.meme:active > .meme_pic {
+  opacity: 0.8;
+}
+
+label:active ~ .title > .accordion_icon {
+  animation-name: accordion_anim;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes accordion_anim {
+  0% {
+    background-image: url("../refs/favicons/accordion.svg");
+  }
+  50% {
+    background-image: url("../refs/favicons/accordion_play.svg");
+  }
+  100% {
+    background-image: url("../refs/favicons/accordion.svg");
+  }
+}
+
+@media (any-hover: hover) {
+  .meme:hover > .meme_name > .cross {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 1.5rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  label:hover p.meme_name {
+    color: #9f0536;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .meme:hover {
+    cursor: pointer;
+  }
+
+  .meme:hover > .meme_pic {
+    cursor: pointer;
+    width: 16rem;
+    height: 16rem;
+    background-size: 16rem 16rem;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 819.99px) {
+  html {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1919.99px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 1rem;
+  }
+}
